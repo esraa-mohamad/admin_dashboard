@@ -1,3 +1,4 @@
+import 'package:admin_dashboard/core/widgets/adaptive_layout.dart';
 import 'package:flutter/material.dart';
 
 class DashboardBody extends StatelessWidget {
@@ -5,6 +6,10 @@ class DashboardBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column();
+    return AdaptiveLayout(
+        mobileLayout: (context) => const SizedBox(),
+        tabletLayout: (context) => const SizedBox(),
+        desktopLayout: (context) => const SizedBox(),
+    );
   }
 }
