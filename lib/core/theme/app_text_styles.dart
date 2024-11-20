@@ -73,12 +73,12 @@ class AppTextStyles {
       color: Colors.white
     );
   }
-  static TextStyle font14LotionRegular(BuildContext context){
+  static TextStyle font14DarkGrayRegular(BuildContext context){
     return templateStyle(
       context: context ,
       fontWeight: FontWeightHelper.regular ,
       fontSize: 14 ,
-      color: AppColor.lotion
+      color: AppColor.darkGray
     );
   }
   static TextStyle font24WhiteSemiBold(BuildContext context){
@@ -138,7 +138,14 @@ class AppTextStyles {
         color: AppColor.darkGray
     );
   }
-
+  static TextStyle font16MainBlueBold(BuildContext context){
+    return templateStyle(
+        context: context ,
+        fontWeight: FontWeightHelper.bold ,
+        fontSize: 16 ,
+        color: AppColor.mainPictonBlue
+    );
+  }
 }
 
 double getResponsiveFontSize(BuildContext context,
