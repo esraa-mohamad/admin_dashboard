@@ -81,12 +81,28 @@ class AppTextStyles {
       color: AppColor.darkGray
     );
   }
+  static TextStyle font14LotionRegular(BuildContext context){
+    return templateStyle(
+      context: context ,
+      fontWeight: FontWeightHelper.regular ,
+      fontSize: 14 ,
+      color: AppColor.lotion
+    );
+  }
   static TextStyle font24WhiteSemiBold(BuildContext context){
     return templateStyle(
       context: context ,
       fontWeight: FontWeightHelper.semiBold ,
       fontSize: 24 ,
       color: Colors.white
+    );
+  }
+  static TextStyle font24MainBlueSemiBold(BuildContext context){
+    return templateStyle(
+        context: context ,
+        fontWeight: FontWeightHelper.semiBold ,
+        fontSize: 24 ,
+        color: AppColor.mainPictonBlue
     );
   }
 
@@ -144,6 +160,14 @@ class AppTextStyles {
         fontWeight: FontWeightHelper.bold ,
         fontSize: 16 ,
         color: AppColor.mainPictonBlue
+    );
+  }
+  static TextStyle font18WhiteSemiBold(BuildContext context){
+    return templateStyle(
+        context: context ,
+        fontWeight: FontWeightHelper.semiBold ,
+        fontSize: 18 ,
+        color: Colors.white
     );
   }
 }

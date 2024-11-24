@@ -17,7 +17,7 @@ class CustomDrawer extends StatelessWidget {
     return Container(
       color: Colors.white,
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 28),
+        padding: const EdgeInsets.symmetric(horizontal: 20),
         child: CustomScrollView(
           slivers: [
             SliverToBoxAdapter(
@@ -53,7 +53,9 @@ class CustomDrawer extends StatelessWidget {
               child: Column(
                 children: [
                   Expanded(
-                    child: SizedBox(),
+                    child: SizedBox(
+                      height: 20,
+                    ),
                   ),
                   DrawerItem(
                     drawerItemModel: DrawerItemModel(

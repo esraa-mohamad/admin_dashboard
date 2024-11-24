@@ -9,5 +9,6 @@ class AppColor{
   static const Color bittersweet = Color(0XFFF3735E);
   static const Color pastelGreen = Color(0XFF7DD97B);
   static const Color ghostWhite = Color(0XFFF7F9FA);
+  static const Color antiFlashWhite = Color(0XFFF1F1F1);
 
 }
