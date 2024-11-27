@@ -170,6 +170,23 @@ class AppTextStyles {
         color: Colors.white
     );
   }
+
+  static TextStyle font20RedSemiBold(BuildContext context){
+    return templateStyle(
+        context: context ,
+        fontWeight: FontWeightHelper.semiBold ,
+        fontSize: 20 ,
+        color: AppColor.bitterSweet
+    );
+  }
+  static TextStyle font20GreenSemiBold(BuildContext context){
+    return templateStyle(
+        context: context ,
+        fontWeight: FontWeightHelper.semiBold ,
+        fontSize: 20 ,
+        color: AppColor.pastelGreen
+    );
+  }
 }
 
 double getResponsiveFontSize(BuildContext context,

@@ -11,18 +11,33 @@ class DrawerItem extends StatelessWidget {
   final bool isActive;
   @override
   Widget build(BuildContext context) {
+    return isActive ? activeItem(context, drawerItemModel: drawerItemModel) :
+        unActiveItem(context, drawerItemModel: drawerItemModel) ;
+  }
+
+  Widget unActiveItem(BuildContext context ,{required DrawerItemModel drawerItemModel}){
     return ListTile(
       leading: SvgPicture.asset(
         drawerItemModel.image ,
       ),
       title: Text(
         drawerItemModel.title ,
-        style: isActive  ? AppTextStyles.font16MainBlueBold(context)
-            : AppTextStyles.font16AteneoBlueRegular(context),
+        style: AppTextStyles.font16AteneoBlueRegular(context),
+      ),
+    );
+  }
+  Widget activeItem(BuildContext context ,{required DrawerItemModel drawerItemModel}){
+    return ListTile(
+      leading: SvgPicture.asset(
+        drawerItemModel.image ,
+      ),
+      title: Text(
+        drawerItemModel.title ,
+        style: AppTextStyles.font16MainBlueBold(context),
       ),
       trailing: Container(
         width: 3.27,
-        color:isActive ? AppColor.mainPictonBlue : Colors.white,
+        color:AppColor.mainPictonBlue,
       ),
     );
   }

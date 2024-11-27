@@ -6,9 +6,10 @@ class AppColor{
   static const Color lotion = Color(0XFFFAFAFA);
   static const Color ateneoBlue = Color(0XFF064061);
   static const Color darkGray = Color(0XFFAAAAAA);
-  static const Color bittersweet = Color(0XFFF3735E);
+  static const Color bitterSweet = Color(0XFFF3735E);
   static const Color pastelGreen = Color(0XFF7DD97B);
   static const Color ghostWhite = Color(0XFFF7F9FA);
   static const Color antiFlashWhite = Color(0XFFF1F1F1);
+  static const Color platinum = Color(0XFFE8E8E8);
 
 }
