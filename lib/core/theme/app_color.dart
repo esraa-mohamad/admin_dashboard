@@ -11,5 +11,7 @@ class AppColor{
   static const Color ghostWhite = Color(0XFFF7F9FA);
   static const Color antiFlashWhite = Color(0XFFF1F1F1);
   static const Color platinum = Color(0XFFE8E8E8);
+  static const Color cyanCornflowerBlue = Color(0XFF208CC8);
+  static const Color bone = Color(0XFFE2DECD);
 
 }

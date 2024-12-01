@@ -187,6 +187,14 @@ class AppTextStyles {
         color: AppColor.pastelGreen
     );
   }
+  static TextStyle font16CyanBlueMedium(BuildContext context){
+    return templateStyle(
+        context: context ,
+        fontWeight: FontWeightHelper.medium ,
+        fontSize: 16 ,
+        color: AppColor.cyanCornflowerBlue
+    );
+  }
 }
 
 double getResponsiveFontSize(BuildContext context,
