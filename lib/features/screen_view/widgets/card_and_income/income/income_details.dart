@@ -1,7 +1,8 @@
 import 'package:admin_dashboard/core/models/income_details_item_model.dart';
 import 'package:admin_dashboard/core/theme/app_color.dart';
-import 'package:admin_dashboard/features/desktop_layout/widgets/card_and_income/income/income_details_item.dart';
 import 'package:flutter/material.dart';
+
+import 'income_details_item.dart';
 
 class IncomeDetails extends StatelessWidget {
   const IncomeDetails({super.key});

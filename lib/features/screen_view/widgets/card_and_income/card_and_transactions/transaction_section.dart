@@ -1,5 +1,5 @@
 import 'package:admin_dashboard/core/theme/app_text_styles.dart';
-import 'package:admin_dashboard/features/desktop_layout/widgets/card_and_income/card_and_transactions/transaction_items_list.dart';
+import 'package:admin_dashboard/features/screen_view/widgets/card_and_income/card_and_transactions/transaction_items_list.dart';
 import 'package:flutter/cupertino.dart';
 
 class TransactionSection extends StatelessWidget {

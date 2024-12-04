@@ -1,9 +1,10 @@
 import 'package:admin_dashboard/core/theme/app_color.dart';
 import 'package:admin_dashboard/core/theme/app_text_styles.dart';
-import 'package:admin_dashboard/features/desktop_layout/widgets/expenses_and_invoices/invoices/quick_invoices_form.dart';
-import 'package:admin_dashboard/features/desktop_layout/widgets/expenses_and_invoices/invoices/header_quick_invoices.dart';
-import 'package:admin_dashboard/features/desktop_layout/widgets/expenses_and_invoices/invoices/transaction_user_info_list_view.dart';
+import 'package:admin_dashboard/features/screen_view/widgets/expenses_and_invoices/invoices/quick_invoices_form.dart';
+import 'package:admin_dashboard/features/screen_view/widgets/expenses_and_invoices/invoices/transaction_user_info_list_view.dart';
 import 'package:flutter/material.dart';
+
+import 'header_quick_invoices.dart';
 
 class QuickInvoices extends StatelessWidget {
   const QuickInvoices({super.key});

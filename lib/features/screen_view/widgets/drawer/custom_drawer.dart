@@ -1,13 +1,13 @@
 import 'package:admin_dashboard/core/helper/app_icons.dart';
 import 'package:admin_dashboard/core/models/drawer_item_model.dart';
 import 'package:admin_dashboard/core/models/user_info_model.dart';
-import 'package:admin_dashboard/features/desktop_layout/widgets/drawer/drawer_item.dart';
-import 'package:admin_dashboard/features/desktop_layout/widgets/drawer/drawer_items_list_view.dart';
-import 'package:admin_dashboard/features/desktop_layout/widgets/drawer/gallery_container.dart';
 import 'package:admin_dashboard/core/widgets/user_info_list_tile.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/helper/app_images.dart';
+import 'drawer_item.dart';
+import 'drawer_items_list_view.dart';
+import 'gallery_container.dart';
 
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({super.key});

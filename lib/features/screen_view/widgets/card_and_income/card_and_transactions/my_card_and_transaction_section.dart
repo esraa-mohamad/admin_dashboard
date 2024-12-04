@@ -1,5 +1,5 @@
 import 'package:admin_dashboard/core/theme/app_color.dart';
-import 'package:admin_dashboard/features/desktop_layout/widgets/card_and_income/card_and_transactions/transaction_section.dart';
+import 'package:admin_dashboard/features/screen_view/widgets/card_and_income/card_and_transactions/transaction_section.dart';
 import 'package:flutter/material.dart';
 
 import 'my_card_section.dart';

@@ -1,7 +1,7 @@
-import 'package:admin_dashboard/features/desktop_layout/widgets/card_and_income/income/income_section.dart';
 import 'package:flutter/material.dart';
 
 import 'card_and_transactions/my_card_and_transaction_section.dart';
+import 'income/income_section.dart';
 
 class CustomCardAndIncome extends StatelessWidget {
   const CustomCardAndIncome({super.key});

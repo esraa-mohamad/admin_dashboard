@@ -1,7 +1,8 @@
 import 'package:admin_dashboard/core/helper/app_icons.dart';
 import 'package:admin_dashboard/core/models/expenses_item_model.dart';
-import 'package:admin_dashboard/features/desktop_layout/widgets/expenses_and_invoices/expenses/expenses_item.dart';
 import 'package:flutter/material.dart';
+
+import 'expenses_item.dart';
 
 class ExpensesItemsList extends StatefulWidget {
   const ExpensesItemsList({super.key});

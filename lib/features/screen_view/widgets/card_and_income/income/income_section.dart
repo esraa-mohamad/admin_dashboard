@@ -1,6 +1,7 @@
-import 'package:admin_dashboard/features/desktop_layout/widgets/card_and_income/income/chart_and_details_section.dart';
-import 'package:admin_dashboard/features/desktop_layout/widgets/card_and_income/income/income_and_monthly.dart';
 import 'package:flutter/material.dart';
+
+import 'chart_and_details_section.dart';
+import 'income_and_monthly.dart';
 
 class IncomeSection extends StatelessWidget {
   const IncomeSection({super.key});

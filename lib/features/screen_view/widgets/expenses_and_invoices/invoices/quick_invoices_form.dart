@@ -1,7 +1,8 @@
 import 'package:admin_dashboard/core/models/transaction_text_field_model.dart';
-import 'package:admin_dashboard/features/desktop_layout/widgets/expenses_and_invoices/invoices/footer_invoices.dart';
-import 'package:admin_dashboard/features/desktop_layout/widgets/expenses_and_invoices/invoices/transaction_text_field_item.dart';
+import 'package:admin_dashboard/features/screen_view/widgets/expenses_and_invoices/invoices/transaction_text_field_item.dart';
 import 'package:flutter/cupertino.dart';
+
+import 'footer_invoices.dart';
 
 class QuickInvoicesForm extends StatelessWidget {
   QuickInvoicesForm({super.key});

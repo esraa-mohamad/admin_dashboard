@@ -1,7 +1,9 @@
-import 'package:admin_dashboard/features/desktop_layout/widgets/card_and_income/custom_card_and_income.dart';
-import 'package:admin_dashboard/features/desktop_layout/widgets/drawer/custom_drawer.dart';
-import 'package:admin_dashboard/features/desktop_layout/widgets/expenses_and_invoices/custom_expenses_and_invoices.dart';
+
 import 'package:flutter/material.dart';
+
+import '../../screen_view/widgets/card_and_income/custom_card_and_income.dart';
+import '../../screen_view/widgets/drawer/custom_drawer.dart';
+import '../../screen_view/widgets/expenses_and_invoices/custom_expenses_and_invoices.dart';
 
 class DesktopLayout extends StatelessWidget {
   const DesktopLayout({super.key});
