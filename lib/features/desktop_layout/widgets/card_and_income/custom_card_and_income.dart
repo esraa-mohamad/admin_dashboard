@@ -10,23 +10,19 @@ class CustomCardAndIncome extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(top: 40),
-      child: CustomScrollView(
-        slivers: [
-          SliverToBoxAdapter(
-            child: MyCardDataAndTransactionSection(),
-          ),
-          SliverToBoxAdapter(
-            child: SizedBox(
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            MyCardDataAndTransactionSection(),
+            SizedBox(
               height: 24,
             ),
-          ),
-          SliverFillRemaining(
-            hasScrollBody: false,
-            child: Expanded(
-              child: IncomeSection(),
+            SizedBox(
+              height: 300,
+                child: IncomeSection(),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

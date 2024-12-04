@@ -8,14 +8,12 @@ class ChartAndDetailsSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Expanded(child: IncomeChart()),
-          Expanded(child: IncomeDetails()),
-        ],
-      ),
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Flexible(child: IncomeChart()),
+        Flexible(child: IncomeDetails()),
+      ],
     );
   }
 }
