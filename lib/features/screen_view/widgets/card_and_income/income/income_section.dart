@@ -22,17 +22,15 @@ class IncomeSection extends StatelessWidget {
           topLeft: Radius.circular(12),
         )
       ),
-      child: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            IncomeAndMonthly(),
-            SizedBox(
-              height: 16,
-            ),
-            ChartAndDetailsSection(),
-          ],
-        ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          IncomeAndMonthly(),
+          SizedBox(
+            height: 16,
+          ),
+          ChartAndDetailsSection(),
+        ],
       ),
     );
   }

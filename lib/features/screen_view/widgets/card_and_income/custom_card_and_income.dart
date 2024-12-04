@@ -17,10 +17,7 @@ class CustomCardAndIncome extends StatelessWidget {
             SizedBox(
               height: 24,
             ),
-            SizedBox(
-              height: 300,
-                child: IncomeSection(),
-            ),
+            IncomeSection(),
           ],
         ),
       ),

@@ -10,10 +10,10 @@ class ChartAndDetailsSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Flexible(child: IncomeChart()),
-        Flexible(child: IncomeDetails()),
+        Expanded(child: IncomeChart()),
+        Expanded(child: IncomeDetails()),
       ],
     );
   }
