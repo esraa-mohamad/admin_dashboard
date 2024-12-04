@@ -18,14 +18,20 @@ class DesktopLayout extends StatelessWidget {
         ),
         Expanded(
           flex: 3,
-          child: CustomExpensesAndInvoices(),
+          child: Padding(
+            padding: const EdgeInsets.only(top: 40),
+            child: CustomExpensesAndInvoices(),
+          ),
         ),
         SizedBox(
           width: 24,
         ),
         Expanded(
           flex: 2,
-            child: CustomCardAndIncome()),
+            child: Padding(
+              padding: const EdgeInsets.only(top: 40),
+              child: CustomCardAndIncome(),
+            )),
       ],
     );
   }

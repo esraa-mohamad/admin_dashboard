@@ -8,18 +8,15 @@ class CustomCardAndIncome extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(top: 40),
-      child: SingleChildScrollView(
-        child: Column(
-          children: [
-            MyCardDataAndTransactionSection(),
-            SizedBox(
-              height: 24,
-            ),
-            IncomeSection(),
-          ],
-        ),
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          MyCardDataAndTransactionSection(),
+          SizedBox(
+            height: 24,
+          ),
+          IncomeSection(),
+        ],
       ),
     );
   }
