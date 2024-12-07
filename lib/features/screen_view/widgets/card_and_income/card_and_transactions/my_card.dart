@@ -13,7 +13,6 @@ class MyCard extends StatelessWidget {
     return AspectRatio(
       aspectRatio: 420 / 215,
       child: Container(
-        width: double.infinity,
         decoration: BoxDecoration(
           color: AppColor.mainPictonBlue,
           borderRadius: BorderRadius.circular(12),

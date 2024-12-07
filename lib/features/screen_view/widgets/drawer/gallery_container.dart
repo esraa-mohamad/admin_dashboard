@@ -14,8 +14,11 @@ class GalleryContainer extends StatelessWidget {
         vertical: 15,
       ),
       color: AppColor.silverGrey,
-      child: Center(
-        child: SvgPicture.asset(AppIcons.gallery , width: 24 , height: 24,),
+      child: FittedBox(
+        fit: BoxFit.scaleDown,
+        child: Center(
+          child: SvgPicture.asset(AppIcons.gallery , width: 24 , height: 24,),
+        ),
       ),
     );
   }

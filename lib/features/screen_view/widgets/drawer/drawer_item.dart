@@ -20,9 +20,13 @@ class DrawerItem extends StatelessWidget {
       leading: SvgPicture.asset(
         drawerItemModel.image ,
       ),
-      title: Text(
-        drawerItemModel.title ,
-        style: AppTextStyles.font16AteneoBlueRegular(context),
+      title: FittedBox(
+        alignment: AlignmentDirectional.centerStart,
+        fit: BoxFit.scaleDown,
+        child: Text(
+          drawerItemModel.title ,
+          style: AppTextStyles.font16AteneoBlueRegular(context),
+        ),
       ),
     );
   }
@@ -31,9 +35,13 @@ class DrawerItem extends StatelessWidget {
       leading: SvgPicture.asset(
         drawerItemModel.image ,
       ),
-      title: Text(
-        drawerItemModel.title ,
-        style: AppTextStyles.font16MainBlueBold(context),
+      title: FittedBox(
+        alignment: AlignmentDirectional.centerStart,
+        fit: BoxFit.scaleDown,
+        child: Text(
+          drawerItemModel.title ,
+          style: AppTextStyles.font16MainBlueBold(context),
+        ),
       ),
       trailing: Container(
         width: 3.27,
