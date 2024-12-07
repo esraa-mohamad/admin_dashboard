@@ -57,11 +57,10 @@ class MyCard extends StatelessWidget {
                 ],
               ),
             ),
-            Spacer(),
+            const Expanded(child: SizedBox()),
             Padding(
               padding: const EdgeInsets.only(
                 right: 24 ,
-                bottom: 27,
               ),
               child: Align(
                 alignment: AlignmentDirectional.bottomEnd,
@@ -83,6 +82,7 @@ class MyCard extends StatelessWidget {
                 ),
               ),
             ),
+
           ],
         ),
       ),

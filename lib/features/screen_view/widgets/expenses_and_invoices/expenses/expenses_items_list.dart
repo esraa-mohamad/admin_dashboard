@@ -34,29 +34,59 @@ class _ExpensesItemsListState extends State<ExpensesItemsList> {
   @override
   Widget build(BuildContext context) {
     return Row(
-      children: items.map((e){
-        int index = items.indexOf(e);
-        return Expanded(
-          child: GestureDetector(
-            onTap: (){
-              if(active != index){
-                setState(() {
-                  active = index;
-                });
-              }
-            },
-            child: Padding(
-              padding:  EdgeInsets.only(
-                  right: index == items.length-1 ? 0 : 12
-              ),
-              child: ExpensesItem(
-                expensesItemModel: items[index],
-                isActive: active == index,
-              ),
-            ),
+      children: [
+      Expanded(
+        child: GestureDetector(
+          onTap: () {
+            if (active != 0) {
+              setState(() {
+                active = 0;
+              });
+            }
+          },
+          child: ExpensesItem(
+            expensesItemModel: items[0],
+            isActive: active == 0,
           ),
-        );
-      }).toList()
+        ),
+      ),
+        SizedBox(
+          width: 12,
+        ),
+        Expanded(
+        child: GestureDetector(
+          onTap: () {
+            if (active != 1) {
+              setState(() {
+                active = 1;
+              });
+            }
+          },
+          child: ExpensesItem(
+            expensesItemModel: items[1],
+            isActive: active == 1,
+          ),
+        ),
+      ),
+        SizedBox(
+          width: 12,
+        ),
+        Expanded(
+        child: GestureDetector(
+          onTap: () {
+            if (active != 2) {
+              setState(() {
+                active = 2;
+              });
+            }
+          },
+          child: ExpensesItem(
+            expensesItemModel: items[2],
+            isActive: active == 2,
+          ),
+        ),
+      ),
+    ],
     );
   }
 }

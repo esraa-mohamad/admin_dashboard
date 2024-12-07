@@ -5,50 +5,66 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class ExpensesItem extends StatelessWidget {
-  const ExpensesItem({super.key, required this.expensesItemModel, required this.isActive});
+  const ExpensesItem(
+      {super.key, required this.expensesItemModel, required this.isActive});
 
-  final ExpensesItemModel expensesItemModel ;
-  final bool isActive  ;
+  final ExpensesItemModel expensesItemModel;
+
+  final bool isActive;
+
   @override
   Widget build(BuildContext context) {
-    return  isActive ?
-        activeExpensesItem(context, expensesItemModel) :
-      unActiveExpensesItem(context, expensesItemModel);
+    return isActive
+        ? activeExpensesItem(context, expensesItemModel)
+        : unActiveExpensesItem(context, expensesItemModel);
   }
 
-  Widget activeExpensesItem(BuildContext context ,  ExpensesItemModel expensesItemModel){
+  Widget activeExpensesItem(
+      BuildContext context, ExpensesItemModel expensesItemModel) {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 20, vertical: 16),
-      decoration: BoxDecoration(
-        color: AppColor.mainPictonBlue,
-        borderRadius: BorderRadius.circular(12),
-      ),
+      decoration: ShapeDecoration(
+          color: AppColor.mainPictonBlue,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(12),
+            side: BorderSide(
+              width: 1,
+              color: AppColor.mainPictonBlue,
+            ),
+          )),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Container(
-                padding: EdgeInsets.symmetric(
-                  horizontal: 14,
-                  vertical: 14,
-                ),
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: Colors.white10,
-                ),
-                child: Center(
-                  child: SvgPicture.asset(
-                    expensesItemModel.activeImage,
-                    width: 32,
-                    height: 32,
+              Flexible(
+                child: ConstrainedBox(
+                  constraints: BoxConstraints(
+                    maxHeight: 60,
+                    maxWidth: 60,
+                  ),
+                  child: AspectRatio(
+                    aspectRatio: 1,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.white10,
+                      ),
+                      child: Center(
+                        child: SvgPicture.asset(
+                          expensesItemModel.activeImage,
+                          width: 32,
+                          height: 32,
+                        ),
+                      ),
+                    ),
                   ),
                 ),
               ),
               Spacer(),
               Icon(
-                Icons.arrow_forward_ios ,
+                Icons.arrow_forward_ios,
                 size: 24,
                 color: Colors.white,
               )
@@ -57,28 +73,47 @@ class ExpensesItem extends StatelessWidget {
           SizedBox(
             height: 34,
           ),
-          Text(expensesItemModel.title , style: AppTextStyles.font16WhiteSemiBold(context),),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              expensesItemModel.title,
+              style: AppTextStyles.font16WhiteSemiBold(context),
+            ),
+          ),
           SizedBox(
             height: 8,
           ),
-          Text('April 2022' , style: AppTextStyles.font14LotionRegular(context),),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              'April 2022',
+              style: AppTextStyles.font14LotionRegular(context),
+            ),
+          ),
           SizedBox(
             height: 16,
           ),
-          Text('\$20,129' , style: AppTextStyles.font24WhiteSemiBold(context),),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              '\$20,129',
+              style: AppTextStyles.font24WhiteSemiBold(context),
+            ),
+          ),
         ],
       ),
     );
   }
 
-  Widget unActiveExpensesItem(BuildContext context ,  ExpensesItemModel expensesItemModel){
+  Widget unActiveExpensesItem(
+      BuildContext context, ExpensesItemModel expensesItemModel) {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 20, vertical: 16),
-      decoration: BoxDecoration(
-        border: Border.all(
-          color: AppColor.antiFlashWhite
+      decoration: ShapeDecoration(
+        shape: RoundedRectangleBorder(
+          side: BorderSide(width: 1, color: AppColor.antiFlashWhite),
+          borderRadius: BorderRadius.circular(12),
         ),
-        borderRadius: BorderRadius.circular(12),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -86,26 +121,30 @@ class ExpensesItem extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Container(
-                padding: EdgeInsets.symmetric(
-                  horizontal: 14,
-                  vertical: 14,
-                ),
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: AppColor.lotion,
-                ),
-                child: Center(
-                  child: SvgPicture.asset(
-                    expensesItemModel.inActiveImage,
-                    width: 32,
-                    height: 32,
+              Flexible(
+                child: ConstrainedBox(
+                  constraints: BoxConstraints(maxWidth: 60, maxHeight: 60),
+                  child: AspectRatio(
+                    aspectRatio: 1,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: AppColor.lotion,
+                      ),
+                      child: Center(
+                        child: SvgPicture.asset(
+                          expensesItemModel.inActiveImage,
+                          width: 32,
+                          height: 32,
+                        ),
+                      ),
+                    ),
                   ),
                 ),
               ),
               Spacer(),
               Icon(
-                Icons.arrow_forward_ios ,
+                Icons.arrow_forward_ios,
                 size: 24,
                 color: AppColor.ateneoBlue,
               )
@@ -114,18 +153,35 @@ class ExpensesItem extends StatelessWidget {
           SizedBox(
             height: 34,
           ),
-          Text(expensesItemModel.title , style: AppTextStyles.font16AteneoBlueSemiBold(context),),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              expensesItemModel.title,
+              style: AppTextStyles.font16AteneoBlueSemiBold(context),
+            ),
+          ),
           SizedBox(
             height: 8,
           ),
-          Text('April 2022' , style: AppTextStyles.font14DarkGrayRegular(context),),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              'April 2022',
+              style: AppTextStyles.font14DarkGrayRegular(context),
+            ),
+          ),
           SizedBox(
             height: 16,
           ),
-          Text('\$20,129' , style: AppTextStyles.font24MainBlueSemiBold(context),),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              '\$20,129',
+              style: AppTextStyles.font24MainBlueSemiBold(context),
+            ),
+          ),
         ],
       ),
     );
   }
-
 }
