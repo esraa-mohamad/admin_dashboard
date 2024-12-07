@@ -33,14 +33,12 @@ class IncomeDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: List.generate(incomeItems.length, (index) {
-        return Padding(
-          padding: EdgeInsets.only(bottom:  12),
-          child: IncomeDetailsItem(
-            incomeDetailsItemModel: incomeItems[index],
-          ),
-        );
-      }),
+      children: incomeItems.map((e) => Padding(
+        padding: EdgeInsets.only(bottom:12),
+        child: IncomeDetailsItem(
+          incomeDetailsItemModel: e,
+        ),
+      )).toList()
     );
   }
 }

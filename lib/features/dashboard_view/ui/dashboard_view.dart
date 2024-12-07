@@ -1,3 +1,4 @@
+import 'package:admin_dashboard/core/helper/app_size_helper.dart';
 import 'package:admin_dashboard/core/theme/app_color.dart';
 import 'package:admin_dashboard/features/screen_view/widgets/drawer/custom_drawer.dart';
 import 'package:flutter/material.dart';
@@ -21,7 +22,7 @@ class _DashboardViewState extends State<DashboardView> {
     return Scaffold(
       key: scaffoldKey,
       backgroundColor: AppColor.ghostWhite,
-      appBar: MediaQuery.sizeOf(context).width < 800 ? AppBar(
+      appBar: MediaQuery.sizeOf(context).width < AppSizeHelper.tablet ? AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
         automaticallyImplyLeading: false,
@@ -36,7 +37,7 @@ class _DashboardViewState extends State<DashboardView> {
           ),
         ),
       ) : null,
-      drawer: MediaQuery.sizeOf(context).width < 800 ? CustomDrawer() : null,
+      drawer: MediaQuery.sizeOf(context).width < AppSizeHelper.tablet ? CustomDrawer() : null,
       body: DashboardBody(),
     );
   }

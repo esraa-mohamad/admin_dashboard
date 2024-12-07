@@ -2,10 +2,10 @@ import 'package:admin_dashboard/core/helper/app_icons.dart';
 import 'package:admin_dashboard/core/theme/app_color.dart';
 import 'package:admin_dashboard/core/theme/app_text_styles.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_svg/svg.dart';
 
-class IncomeAndMonthly extends StatelessWidget {
-  const IncomeAndMonthly({super.key});
+class IncomeHeader extends StatelessWidget {
+  const IncomeHeader({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +17,7 @@ class IncomeAndMonthly extends StatelessWidget {
           style: AppTextStyles.font20AteneoBlueSemiBold(context),
         ),
         Container(
-          padding: EdgeInsets.only(left: 16, right: 12, top: 14, bottom: 14),
+          padding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(12),
             border: Border.all(

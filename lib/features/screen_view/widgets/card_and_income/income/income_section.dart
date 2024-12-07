@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'chart_and_details_section.dart';
-import 'income_and_monthly.dart';
+import 'income_section_body.dart';
+import 'income_header.dart';
 
 class IncomeSection extends StatelessWidget {
   const IncomeSection({super.key});
@@ -25,11 +25,8 @@ class IncomeSection extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          IncomeAndMonthly(),
-          SizedBox(
-            height: 16,
-          ),
-          ChartAndDetailsSection(),
+          IncomeHeader(),
+          IncomeSectionBody(),
         ],
       ),
     );

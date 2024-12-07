@@ -8,16 +8,14 @@ class CustomCardAndIncome extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        children: [
-          MyCardDataAndTransactionSection(),
-          SizedBox(
-            height: 24,
-          ),
-          IncomeSection(),
-        ],
-      ),
+    return Column(
+      children: [
+        MyCardDataAndTransactionSection(),
+        SizedBox(
+          height: 24,
+        ),
+        IncomeSection(),
+      ],
     );
   }
 }

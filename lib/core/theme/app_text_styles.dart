@@ -1,3 +1,4 @@
+import 'package:admin_dashboard/core/helper/app_size_helper.dart';
 import 'package:admin_dashboard/core/theme/app_color.dart';
 import 'package:admin_dashboard/core/theme/font_family_helper.dart';
 import 'package:admin_dashboard/core/theme/font_weight_helper.dart';
@@ -5,7 +6,7 @@ import 'package:flutter/material.dart';
 
 class AppTextStyles {
   static TextStyle templateStyle({
-    required BuildContext context,
+    required BuildContext context ,
     required FontWeight fontWeight,
     required Color color,
     required double fontSize,
@@ -17,52 +18,52 @@ class AppTextStyles {
         fontSize: getResponsiveFontSize(context, baseFontSize: fontSize));
   }
 
-  static TextStyle font16AteneoBlueSemiBold(BuildContext context){
-    return templateStyle(
-      context: context ,
-      fontWeight: FontWeightHelper.semiBold ,
-      fontSize: 16 ,
-      color: AppColor.ateneoBlue
+  static TextStyle font16AteneoBlueSemiBold(context) {
+    return  templateStyle(
+      context: context,
+        fontWeight: FontWeightHelper.semiBold ,
+        fontSize: 16 ,
+        color: AppColor.ateneoBlue
     );
   }
-  static TextStyle font12DarkGrayRegular(BuildContext context){
-    return templateStyle(
-      context: context ,
-      fontWeight: FontWeightHelper.regular ,
-      fontSize: 12 ,
-      color: AppColor.darkGray
+  static TextStyle font12DarkGrayRegular(context) {
+    return  templateStyle(
+      context:context,
+        fontWeight: FontWeightHelper.regular ,
+        fontSize: 12 ,
+        color: AppColor.darkGray
     );
   }
-  static TextStyle font17MainBlueBold(BuildContext context){
+  static TextStyle font17MainBlueBold(context){
     return templateStyle(
-      context: context ,
-      fontWeight: FontWeightHelper.bold ,
-      fontSize: 17 ,
-      color: AppColor.mainPictonBlue
+      context: context,
+        fontWeight: FontWeightHelper.bold ,
+        fontSize: 17 ,
+        color: AppColor.mainPictonBlue
     );
   }
-  static TextStyle font16AteneoBlueRegular(BuildContext context){
-    return templateStyle(
-      context: context ,
-      fontWeight: FontWeightHelper.regular ,
-      fontSize: 16 ,
-      color: AppColor.ateneoBlue
+  static TextStyle font16AteneoBlueRegular(context){
+    return  templateStyle(
+      context: context,
+        fontWeight: FontWeightHelper.regular ,
+        fontSize: 16 ,
+        color: AppColor.ateneoBlue
     );
   }
-  static TextStyle font20AteneoBlueSemiBold(BuildContext context){
+  static TextStyle font20AteneoBlueSemiBold(context) {
     return templateStyle(
-      context: context ,
-      fontWeight: FontWeightHelper.semiBold ,
-      fontSize: 20 ,
-      color: AppColor.ateneoBlue
+      context: context,
+        fontWeight: FontWeightHelper.semiBold ,
+        fontSize: 20 ,
+        color: AppColor.ateneoBlue
     );
   }
   static TextStyle font16AteneoBlueMedium(BuildContext context){
     return templateStyle(
-      context: context ,
-      fontWeight: FontWeightHelper.medium ,
-      fontSize: 16 ,
-      color: AppColor.ateneoBlue
+      context: context,
+        fontWeight: FontWeightHelper.medium ,
+        fontSize: 16 ,
+        color: AppColor.ateneoBlue
     );
   }
   static TextStyle font16WhiteSemiBold(BuildContext context){
@@ -197,8 +198,7 @@ class AppTextStyles {
   }
 }
 
-double getResponsiveFontSize(BuildContext context,
-    {required double baseFontSize}) {
+double getResponsiveFontSize(BuildContext context ,{required double baseFontSize}) {
   double scaleFactor = getScaleFactor(context);
   double responsiveFontSize = baseFontSize * scaleFactor;
   double lowerFontSize = baseFontSize * 0.8;
@@ -207,12 +207,16 @@ double getResponsiveFontSize(BuildContext context,
 }
 
 double getScaleFactor(BuildContext context) {
-  double width = MediaQuery.sizeOf(context).width;
-  if (width < 600) {
-    return width / 400;
-  } else if (width < 900) {
-    return width / 700;
-  } else {
+  // var dispatcher = PlatformDispatcher.instance;
+  // var physicalWidth = dispatcher.views.first.physicalSize.width;
+  // var  devicePixelRatio = dispatcher.views.first.devicePixelRatio;
+  //double width = physicalWidth / devicePixelRatio;
+  double  width = MediaQuery.sizeOf(context).width;
+  if (width < AppSizeHelper.tablet) {
+    return width / 550;
+  } else if (width < AppSizeHelper.desktop) {
     return width / 1000;
+  } else {
+    return width / 1500;
   }
 }
